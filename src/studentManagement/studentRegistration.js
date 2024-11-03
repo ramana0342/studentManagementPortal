@@ -26,7 +26,7 @@ function StudentRegistration() {
         const studentDataWithID = {...studentinputData,id:largestStudentID+1}
         setStudentsData([studentDataWithID,...studentsData])
         setStudentInputData({id:"",name:"",email:"",age:"",class:"",address:"",phone:""})
-        window.alert("Student Registe Successfully")
+        window.alert("Student Registre Successfully")
     }
    
 

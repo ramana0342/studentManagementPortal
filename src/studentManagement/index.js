@@ -1,6 +1,5 @@
-import axios from 'axios';
-import React, { createContext, useContext } from 'react';
-import { useEffect } from 'react';
+
+import React, { createContext} from 'react';
 import { BrowserRouter,Routes,Route, NavLink } from 'react-router-dom';
 import StudentRegistration from './studentRegistration';
 import StudentManagement from './studentManagement';
@@ -24,12 +23,11 @@ function Index() {
   <BrowserRouter>
       <section id="navSection">
         <div className="navBar">
-       <NavLink className="navlinks"  to="/"><h2>Home</h2></NavLink>
+       <NavLink className="navlinks"  to="/"><h2>Student Register</h2></NavLink>
        <NavLink className="navlinks" to="/studentManagement"><h2>Student Activity</h2></NavLink>
        </div>
        </section>
 
-       
        <Routes>
         <Route path="/" element={<StudentRegistration/>}/>
         <Route path="/studentManagement" element={<StudentManagement/>}/>

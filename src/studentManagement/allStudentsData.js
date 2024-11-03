@@ -12,31 +12,31 @@ function AllStudentsData() {
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = Math.ceil(studentsData.length / ITEMS_PER_PAGE);
 
-    // Calculate the current items to display
+    
     const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
     const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
     const currentItems = studentsData.slice(indexOfFirstItem, indexOfLastItem);
 
-    // Function to handle page change
+  
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
 
     const getPaginationRange = () => {
         const range = [];
-        const totalButtonsToShow = 3; // Total buttons to show around the current page
+        const totalButtonsToShow = 3; 
 
-        let startPage = Math.max(2, currentPage - 1); // Start at least from page 2
-        let endPage = Math.min(totalPages - 1, currentPage + 1); // End at most at totalPages - 1
+        let startPage = Math.max(2, currentPage - 1);
+        let endPage = Math.min(totalPages - 1, currentPage + 1); 
 
-        // If the current page is near the edges, adjust the range
+       
         if (currentPage === 1) {
             endPage = Math.min(totalButtonsToShow, totalPages - 1);
         } else if (currentPage === totalPages) {
             startPage = Math.max(2, totalPages - totalButtonsToShow);
         }
 
-        // Add pages to the range
+       
         for (let i = startPage; i <= endPage; i++) {
             range.push(i);
         }
@@ -67,7 +67,7 @@ function AllStudentsData() {
   return (<>
 
 <table className="studentTable">
-                <tr style={{height:"20px"}}>
+                <tr style={{height:"20px",backgroundColor:"gray"}}>
                     <th>Student Name</th>
                     <th>Student Email</th>
                     <th>Student Class</th>

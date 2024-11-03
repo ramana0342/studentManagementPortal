@@ -71,7 +71,7 @@ function FilteredStudents() {
   return (<>
       
       <table className="studentTable">
-                <tr>
+                <tr style={{backgroundColor:"gray"}}>
                     <th>Student Name</th>
                     <th>Student Email</th>
                     <th>Student Class</th>
